@@ -1,0 +1,1 @@
+sourceset_dependencies='{":nxfit-sdk:dokkaHtml/androidTestRelease":[],":nxfit-sdk:dokkaHtml/debug":[],":nxfit-sdk:dokkaHtml/main":[],":nxfit-sdk:dokkaHtml/release":[],":nxfit-sdk:dokkaHtml/testFixtures":[],":nxfit-sdk:dokkaHtml/testFixturesDebug":[],":nxfit-sdk:dokkaHtml/testFixturesRelease":[]}'

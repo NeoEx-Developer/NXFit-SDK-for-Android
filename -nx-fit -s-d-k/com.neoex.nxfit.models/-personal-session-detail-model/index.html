@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PersonalSessionDetailModel</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>NxFit SDK</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":nxfit-sdk:dokkaHtml/release">androidJvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="NxFit SDK::com.neoex.nxfit.models/PersonalSessionDetailModel///PointingToDeclaration//2019718036">
+  <div class="breadcrumbs"><a href="../../../index.html">NxFit SDK</a><span class="delimiter">/</span><a href="../index.html">com.neoex.nxfit.models</a><span class="delimiter">/</span><span class="current">PersonalSessionDetailModel</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Personal</span><wbr></wbr><span>Session</span><wbr></wbr><span>Detail</span><wbr></wbr><span><span>Model</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">PersonalSessionDetailModel</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>activityId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>activityType<span class="token operator">: </span><a href="../../com.neoex.nxfit.enums/-activity-type/index.html">ActivityType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>activeDuration<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/Duration.html">Duration</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>energyBurnedInCalories<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maximalOxygenConsumption<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>sourceIntegration<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>sourceDevice<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>sourceApp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>syncId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>syncVersion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>startedOnLocal<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>endedOnLocal<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>createdOn<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>updatedOn<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>heartRateMetrics<span class="token operator">: </span><a href="-heart-rate-metrics/index.html">PersonalSessionDetailModel.HeartRateMetrics</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>speedMetrics<span class="token operator">: </span><a href="-speed-metrics/index.html">PersonalSessionDetailModel.SpeedMetrics</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cadenceMetrics<span class="token operator">: </span><a href="-cadence-metrics/index.html">PersonalSessionDetailModel.CadenceMetrics</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>powerMetrics<span class="token operator">: </span><a href="-power-metrics/index.html">PersonalSessionDetailModel.PowerMetrics</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-468840369%2FConstructors%2F2019718036" anchor-label="PersonalSessionDetailModel" id="-468840369%2FConstructors%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-personal-session-detail-model.html"><span>Personal</span><wbr></wbr><span>Session</span><wbr></wbr><span>Detail</span><wbr></wbr><span><span>Model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-468840369%2FConstructors%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">activityId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">activityType<span class="token operator">: </span><a href="../../com.neoex.nxfit.enums/-activity-type/index.html">ActivityType</a><span class="token punctuation">, </span></span><span class="parameter ">activeDuration<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/Duration.html">Duration</a><span class="token punctuation">, </span></span><span class="parameter ">energyBurnedInCalories<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">maximalOxygenConsumption<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">sourceIntegration<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sourceDevice<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">sourceApp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">syncId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">syncVersion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">startedOnLocal<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a><span class="token punctuation">, </span></span><span class="parameter ">endedOnLocal<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a><span class="token punctuation">, </span></span><span class="parameter ">createdOn<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a><span class="token punctuation">, </span></span><span class="parameter ">updatedOn<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a><span class="token punctuation">, </span></span><span class="parameter ">heartRateMetrics<span class="token operator">: </span><a href="-heart-rate-metrics/index.html">PersonalSessionDetailModel.HeartRateMetrics</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">speedMetrics<span class="token operator">: </span><a href="-speed-metrics/index.html">PersonalSessionDetailModel.SpeedMetrics</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">cadenceMetrics<span class="token operator">: </span><a href="-cadence-metrics/index.html">PersonalSessionDetailModel.CadenceMetrics</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">powerMetrics<span class="token operator">: </span><a href="-power-metrics/index.html">PersonalSessionDetailModel.PowerMetrics</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-174096863%2FClasslikes%2F2019718036" anchor-label="CadenceMetrics" id="-174096863%2FClasslikes%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cadence-metrics/index.html"><span>Cadence</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-174096863%2FClasslikes%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-cadence-metrics/index.html">CadenceMetrics</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>avgCadencePerMinute<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maxCadencePerMinute<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>minCadencePerMinute<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cadenceUnitShort<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cadenceUnitFull<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1001023574%2FClasslikes%2F2019718036" anchor-label="HeartRateMetrics" id="1001023574%2FClasslikes%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-heart-rate-metrics/index.html"><span>Heart</span><wbr></wbr><span>Rate</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1001023574%2FClasslikes%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-heart-rate-metrics/index.html">HeartRateMetrics</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>avgBPM<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maxBPM<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>minBPM<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-374278123%2FClasslikes%2F2019718036" anchor-label="PowerMetrics" id="-374278123%2FClasslikes%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-power-metrics/index.html"><span>Power</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-374278123%2FClasslikes%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-power-metrics/index.html">PowerMetrics</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>avgPowerInWatts<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maxPowerInWatts<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>minPowerInWatts<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2078140247%2FClasslikes%2F2019718036" anchor-label="SpeedMetrics" id="2078140247%2FClasslikes%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-speed-metrics/index.html"><span>Speed</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2078140247%2FClasslikes%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-speed-metrics/index.html">SpeedMetrics</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>avgSpeedInMetersPerSecond<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maxSpeedInMetersPerSecond<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>minSpeedInMetersPerSecond<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1797869852%2FProperties%2F2019718036" anchor-label="activeDuration" id="-1797869852%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="active-duration.html"><span>active</span><wbr></wbr><span><span>Duration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1797869852%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="active-duration.html">activeDuration</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/Duration.html">Duration</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-202102892%2FProperties%2F2019718036" anchor-label="activityId" id="-202102892%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-id.html"><span>activity</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-202102892%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="activity-id.html">activityId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="883694037%2FProperties%2F2019718036" anchor-label="activityType" id="883694037%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-type.html"><span>activity</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="883694037%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="activity-type.html">activityType</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.enums/-activity-type/index.html">ActivityType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1664506708%2FProperties%2F2019718036" anchor-label="cadenceMetrics" id="-1664506708%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cadence-metrics.html"><span>cadence</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1664506708%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="cadence-metrics.html">cadenceMetrics</a><span class="token operator">: </span><a href="-cadence-metrics/index.html">PersonalSessionDetailModel.CadenceMetrics</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-350345867%2FProperties%2F2019718036" anchor-label="createdOn" id="-350345867%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="created-on.html"><span>created</span><wbr></wbr><span><span>On</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-350345867%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="created-on.html">createdOn</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="817821740%2FProperties%2F2019718036" anchor-label="endedOnLocal" id="817821740%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ended-on-local.html"><span>ended</span><wbr></wbr><span>On</span><wbr></wbr><span><span>Local</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="817821740%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="ended-on-local.html">endedOnLocal</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-696520899%2FProperties%2F2019718036" anchor-label="energyBurnedInCalories" id="-696520899%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="energy-burned-in-calories.html"><span>energy</span><wbr></wbr><span>Burned</span><wbr></wbr><span>In</span><wbr></wbr><span><span>Calories</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-696520899%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="energy-burned-in-calories.html">energyBurnedInCalories</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="117590817%2FProperties%2F2019718036" anchor-label="heartRateMetrics" id="117590817%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="heart-rate-metrics.html"><span>heart</span><wbr></wbr><span>Rate</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="117590817%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="heart-rate-metrics.html">heartRateMetrics</a><span class="token operator">: </span><a href="-heart-rate-metrics/index.html">PersonalSessionDetailModel.HeartRateMetrics</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="237655331%2FProperties%2F2019718036" anchor-label="id" id="237655331%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="237655331%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1491592630%2FProperties%2F2019718036" anchor-label="maximalOxygenConsumption" id="1491592630%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="maximal-oxygen-consumption.html"><span>maximal</span><wbr></wbr><span>Oxygen</span><wbr></wbr><span><span>Consumption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1491592630%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="maximal-oxygen-consumption.html">maximalOxygenConsumption</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-269790624%2FProperties%2F2019718036" anchor-label="powerMetrics" id="-269790624%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="power-metrics.html"><span>power</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-269790624%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="power-metrics.html">powerMetrics</a><span class="token operator">: </span><a href="-power-metrics/index.html">PersonalSessionDetailModel.PowerMetrics</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1725504202%2FProperties%2F2019718036" anchor-label="sourceApp" id="-1725504202%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="source-app.html"><span>source</span><wbr></wbr><span><span>App</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1725504202%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="source-app.html">sourceApp</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1410505875%2FProperties%2F2019718036" anchor-label="sourceDevice" id="-1410505875%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="source-device.html"><span>source</span><wbr></wbr><span><span>Device</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1410505875%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="source-device.html">sourceDevice</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1032474339%2FProperties%2F2019718036" anchor-label="sourceIntegration" id="1032474339%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="source-integration.html"><span>source</span><wbr></wbr><span><span>Integration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1032474339%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="source-integration.html">sourceIntegration</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2112339550%2FProperties%2F2019718036" anchor-label="speedMetrics" id="-2112339550%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="speed-metrics.html"><span>speed</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2112339550%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="speed-metrics.html">speedMetrics</a><span class="token operator">: </span><a href="-speed-metrics/index.html">PersonalSessionDetailModel.SpeedMetrics</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1998529101%2FProperties%2F2019718036" anchor-label="startedOnLocal" id="-1998529101%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="started-on-local.html"><span>started</span><wbr></wbr><span>On</span><wbr></wbr><span><span>Local</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1998529101%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="started-on-local.html">startedOnLocal</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="712335624%2FProperties%2F2019718036" anchor-label="syncId" id="712335624%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sync-id.html"><span>sync</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="712335624%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="sync-id.html">syncId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1112828001%2FProperties%2F2019718036" anchor-label="syncVersion" id="-1112828001%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sync-version.html"><span>sync</span><wbr></wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1112828001%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="sync-version.html">syncVersion</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1283835966%2FProperties%2F2019718036" anchor-label="updatedOn" id="-1283835966%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="updated-on.html"><span>updated</span><wbr></wbr><span><span>On</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1283835966%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="updated-on.html">updatedOn</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/ZonedDateTime.html">ZonedDateTime</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

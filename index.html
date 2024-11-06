@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>NXFit SDK</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="index.html">
+                    <span>NXFit SDK</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":nxfit-sdk:dokkaHtml/release">androidJvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="NXFit SDK::////PointingToDeclaration//2019718036">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>NXFit</span></span> <span><span>SDK</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><p class="paragraph">This SDK is intended to be used to connect to NXFit services.</p><h2 class=""> Getting Started</h2><p class="paragraph">The NXFit SDK is currently hosted on GitHub Packages. Follow these steps to add the SDK to your build:</p><h3 class=""> Create GitHub Access Token</h3><p class="paragraph">GitHub provides maven packages only through authenticated connections.</p><ul><li><p class="paragraph">Login to GitHub (create an account if needed).</p></li><li><p class="paragraph">Go to <strong>Settings</strong> → <strong>Developer Settings</strong> → <strong>Personal access tokens</strong> → <strong>Tokens (Classic)</strong></p></li><li><p class="paragraph">Click on <strong>Generate new token (Classic)</strong></p></li><li><p class="paragraph">Give the new token a meaningful name and the only scope required is <strong>read:packages</strong>.</p></li><li><p class="paragraph">Since this token only requires <strong>read:packages</strong> set the expiration to whatever you feel comfortable with, however for this token scope <i>No Expiration</i> should be fine.</p></li><li><p class="paragraph">Once the required scope is checked, click <strong>Generate token</strong>.</p></li><li><p class="paragraph">Copy the generated access token and record it somewhere safe. You'll need it when updating the <i>build.gradle</i> files.</p></li></ul><h3 class=""> Add the NXFit SDK GitHub Packages repository to your gradle build files</h3><ul><li><p class="paragraph">Using the access token generated in the prior step, add the following maven repository to <i>settings.gradle</i> file:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">  dependencyResolutionManagement {
+        // ...
+        repositories {
+            // other repositories....
+    
+            // For nxfit-sdk from GitHub Packages
+            maven {
+                name = &quot;GitHubPackages&quot;
+                url = uri(&quot;https://maven.pkg.github.com/NeoEx-Developer/NXFit-SDK-for-Android&quot;)
+    
+                credentials {
+                    username = NeoEx-Developer
+                    password = YOUR_GITHUB_ACCESS_TOKEN
+                }
+            }
+        }
+    }</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></li><li><p class="paragraph">Add the following dependency to your app's <i>build.gradle.kts</i> file:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">  dependencies {
+        implementation(&quot;com.neoex:nxfit-sdk:7.0.2&quot;)
+    }</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></li><li><p class="paragraph">Sync the project with Gradle files </p></li><li><p class="paragraph">The <a href="-n-x-fit -s-d-k/com.neoex.nxfit/-n-x-fit/index.html">NXFit</a> interface is the main starting point. The NXFit class must be instatiated using the <a href="-n-x-fit -s-d-k/com.neoex.nxfit/-n-x-fit/-companion/build.html">NXFit.build</a> function. This is a suspend function because it may make network calls and access a local sqlite db. The <a href="-n-x-fit -s-d-k/com.neoex.nxfit/-n-x-fit/-companion/build.html">NXFit.build</a> function requires to things: an instance of <a href="-n-x-fit -s-d-k/com.neoex.nxfit/-configuration-provider/index.html">ConfigurationProvider</a> and <a href="-n-x-fit -s-d-k/com.neoex.nxfit.auth/-auth-provider/index.html">AuthProvider</a>.</p></li><li><p class="paragraph">See <a href="-n-x-fit -s-d-k/com.neoex.nxfit/-n-x-fit/index.html">documentation</a> for usage.</p></li></ul><h2 class=""> Change Log</h2><p class="paragraph"><i>Version 7.0.0</i></p><ul><li><p class="paragraph">Refactored package from com.nxfit.sdk to com.neoex.nxfit</p></li></ul><p class="paragraph"><i>Version 6.0.0</i></p><ul><li><p class="paragraph">Changes to AuthProvider, IntegrationsManager, SourceManager and associated models.</p></li></ul><p class="paragraph"><i>Version 5.0.0</i></p><ul><li><p class="paragraph">Changes to Sources and Sessions</p></li></ul><p class="paragraph"><i>Version 4.4.0</i></p><ul><li><p class="paragraph">Updated to work with changes to the API around new ActivityTypes. Also, the ActivityType is now a String instead of an Int.</p></li></ul><p class="paragraph"><i>Version 4.3.1</i></p><ul><li><p class="paragraph">Fixed issue that prevented syncing Sources under certain conditions. This issue was introduced in version 4.3.0.</p></li></ul><p class="paragraph"><i>Version 4.3.0</i></p><ul><li><p class="paragraph">Added IntegrationsManager.disconnectionEvents and associated IntegrationsManager.DisconnectionEvent to allow client apps to react when a user disconnects an integration. Note that this is only trigger from a user action that leads to disconnection.</p></li></ul><p class="paragraph"><i>Version 4.2.0</i></p><ul><li><p class="paragraph">Renamed the GarminManager to IntegrationsManager along with renaming associated classes and functions as appropriate.</p></li><li><p class="paragraph">Added IntegrationManager.connectionEvents which is used to emit integration connection events. This is triggered from IntegrationManager.handleGarminConsentResponse().</p></li></ul><p class="paragraph"><i>Version 4.1.0</i></p><ul><li><p class="paragraph">Restored Restored ProfileClient.deleteImage() which was accidently removed in prior version.</p></li></ul><p class="paragraph"><i>Version 4.0.0</i></p><ul><li><p class="paragraph">The PersonalSessionDetailModel and PublicSessionDetailModel models have been refactored to contain some metric data as sub-objects that could be null if the metric data is not present.</p></li></ul><p class="paragraph"><i>Version 3.5.0</i></p><ul><li><p class="paragraph">Note, this version contained breaking changes and should have been bumped to version 4.0.0</p></li><li><p class="paragraph">A number of changes were made to many clients and models.</p></li><li><p class="paragraph">The ProfileModel has been renamed to PersonalProfileModel and a PublicProfileModel has been added.</p></li><li><p class="paragraph">A new BadgeModel has been added.</p></li><li><p class="paragraph">BadgesModel has been renamed to UserBadgesModel</p></li><li><p class="paragraph">SessionSummaryModel has been renamed to SessionMetricsModel</p></li><li><p class="paragraph">The ProfileClient.get() overrides have been replaced with a single getPublicProfile() method.</p></li><li><p class="paragraph">a new <strong>userId: Int</strong> parameter has been added to the PublicSessionClient/PublicSessionSampleClient calls that get a session or metrics/samples for a session.</p></li><li><p class="paragraph">SessionClient.listHeartRateZones() has been removed and it's functionality can be replaced with SessionClient.listHeartRateZoneSummaries().</p></li><li><p class="paragraph">SessionSummaryClient.getMovement() has been removed along with the MovementSummaryModel as the contents of that model have been moved to SessionSummaryModel.</p></li></ul><p class="paragraph"><i>Version 3.4.0</i></p><ul><li><p class="paragraph">Added support for paged data.</p></li><li><p class="paragraph">Renamed PublicSessionModel to PublicSessionDetailModel</p></li><li><p class="paragraph">Renamed SessionModel to PersonalSessionDetailModel</p></li><li><p class="paragraph">Updated SessionClient and PublicSessionClient to support retrieving lists of sessions in a format that supports paged data.</p></li><li><p class="paragraph">Added PaginationQuery that allows to query for paged data.</p></li></ul><p class="paragraph"><i>Version 3.3.1</i></p><ul><li><p class="paragraph">ProfileClient.updateImage now returns the Uri of the new profile image.</p></li></ul><p class="paragraph"><i>Version 3.3.0</i></p><ul><li><p class="paragraph">Profile image is now restricted in size and compressed with JPEG before being sent to the server.</p></li></ul><p class="paragraph"><i>Version 3.2.0</i></p><ul><li><p class="paragraph">Added SourceManager.sync() to allow client applications to trigger a sync when needed. This is mostly to allow user initiated refresh ex: Pull to Refresh. This does not invalidate caches.</p></li><li><p class="paragraph">SourceManager.get() now returns SourceModel instead of SourceModel?.</p></li><li><p class="paragraph">Added SourceManager.getOrNull()</p></li></ul><p class="paragraph"><i>Version 3.1.1</i></p><ul><li><p class="paragraph">Fixed issue where the GarminManager would attempt to retrieve Garmin state before the user was authenticated.</p></li></ul><p class="paragraph"><i>Version 3.1.0</i></p><ul><li><p class="paragraph">Added Cadence and Power fields to the SessionModel.</p></li><li><p class="paragraph">Added Cadence and Power sample support.</p></li><li><p class="paragraph">Removed unsupported parameters from Session Sample queries.</p></li><li><p class="paragraph">SessionModel.SourceId has been converted from String to Int.</p></li></ul><p class="paragraph"><i>Version 3.0.0</i></p><ul><li><p class="paragraph">Identifiers in various models have been converted from UUID to Int.</p></li></ul><p class="paragraph"><i>Version 2.0.0</i></p><ul><li><p class="paragraph">Updated models to reflect changes to the API. This is mostly the sample models, but also the SessionModel and SessionsModel. Also, Sample models now have an activeTime property.</p></li><li><p class="paragraph">Added helper methods to some of the clients to make it easier to fetch data that controls cache with both If-Modified-Since and eTag headers.</p></li><li><p class="paragraph">Fixed bug in Badges client that would not properly use the eTag</p></li></ul><p class="paragraph"><i>Version 1.3.0</i></p><ul><li><p class="paragraph">BadgeModel now represents the progress as a value between 0.0f to 1.0f</p></li><li><p class="paragraph">PublicSessionClient has new methods: listHeartRateZones() and listHeartRateZoneSummaries()</p></li><li><p class="paragraph">Added PublicSessionSampleClient</p></li></ul><p class="paragraph"><i>Version 1.2.0</i></p><ul><li><p class="paragraph">PublicSessionProtocol.list has new parameter: studio.</p></li><li><p class="paragraph">PublicSessionProtocol.get no longer accepts both eTag and ifModifiedSince parameters.</p></li><li><p class="paragraph">Added Studio enum to distinguish public sessions between the user's studio and all studios</p></li><li><p class="paragraph">Added isUserSession property to both PublicSessionModel and PublicSessionsModel.PublicSession</p></li></ul></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-1096909863%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit" id="-1096909863%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit/index.html">com.neoex.nxfit</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1096909863%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-1096909863%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit" id="-1096909863%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">This is the starting point for the SDK. The com.neoex.nxfit.NXFit interface provides access all the clients and managers needed to interface with the NXFit service. To build a concrete instance use the <a href="-n-x-fit -s-d-k/com.neoex.nxfit/-n-x-fit/-companion/build.html">NXFit.build</a> method. This is a static method and can be found under the Companion type.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="-2075684959%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.auth" id="-2075684959%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.auth/index.html">com.neoex.nxfit.auth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2075684959%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-2075684959%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.auth" id="-2075684959%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">The NXFit <span data-unresolved-link="////PointingToDeclaration/">clients</span> make API calls which require an access token. When building <a href="-n-x-fit -s-d-k/com.neoex.nxfit/-n-x-fit/index.html">NXFit</a> an instance of <a href="-n-x-fit -s-d-k/com.neoex.nxfit.auth/-auth-provider/index.html">AuthProvider</a> must be supplied.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="-1439605133%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.clients" id="-1439605133%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.clients/index.html">com.neoex.nxfit.clients</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1439605133%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-1439605133%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.clients" id="-1439605133%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">The various clients are used to make the network calls to retrieve data from the server. Clients are a simple wrapper to the web API and do not maintain state.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="-403539523%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.enums" id="-403539523%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.enums/index.html">com.neoex.nxfit.enums</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-403539523%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-403539523%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.enums" id="-403539523%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">All the enums used by the clients and models are defined here.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="1034552253%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.exceptions" id="1034552253%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.exceptions/index.html">com.neoex.nxfit.exceptions</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1034552253%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="1034552253%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.exceptions" id="1034552253%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">All the exceptions that are specific to the NXFit SDK are defined here.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="1107403615%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.managers" id="1107403615%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.managers/index.html">com.neoex.nxfit.managers</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1107403615%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="1107403615%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.managers" id="1107403615%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">Managers are similar to clients as they allow access to the NXFit web API, however, they maintain state either in memory or via local storage.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="940729379%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.models" id="940729379%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.models/index.html">com.neoex.nxfit.models</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="940729379%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="940729379%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.models" id="940729379%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">All the models that are used by the clients and managers are defined here, except the sample models, those are defined in their own package.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="795181703%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.models.enums" id="795181703%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.models.enums/index.html">com.neoex.nxfit.models.enums</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="795181703%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="795181703%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.models.enums" id="795181703%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">All the sample enums are defined here.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="-794974338%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.models.samples" id="-794974338%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.models.samples/index.html">com.neoex.nxfit.models.samples</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-794974338%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-794974338%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.models.samples" id="-794974338%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">All the sample models are defined here.</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="2066747338%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.persistence" id="2066747338%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-n-x-fit -s-d-k/com.neoex.nxfit.persistence/index.html">com.neoex.nxfit.persistence</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2066747338%2FPackages%2F2019718036"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="2066747338%2FPackages%2F2019718036" anchor-label="com.neoex.nxfit.persistence" id="2066747338%2FPackages%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+            <p class="paragraph">Some of the resources from the web API are cacheable via the If-Modified-Since and ETag HTTP headers. This package contains a helper to deal with that.</p>
+          </span></div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
