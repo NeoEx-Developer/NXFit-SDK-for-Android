@@ -58,7 +58,7 @@
   <div class="breadcrumbs"><a href="../../../index.html">NXFit SDK</a><span class="delimiter">/</span><a href="../index.html">com.neoex.nxfit</a><span class="delimiter">/</span><span class="current">ConfigurationProvider</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Configuration</span><wbr></wbr><span><span>Provider</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ConfigurationProvider</a></div><p class="paragraph">An abstraction that defines the configuration requirements for the SDK. An implementation of this must be provided when building <a href="../-n-x-fit/index.html">NXFit</a>.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ConfigurationProvider</a></div><p class="paragraph">An abstraction that defines the configuration requirements for the SDK. An implementation of this must be provided when building <a href="../-n-x-fit/index.html">NXFit</a>.</p><p class="paragraph">Values in this configuration should be treated as static. To change any of these a new instance of <a href="../-n-x-fit/index.html">NXFit</a> should be built with a new implementation of this interface.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
@@ -75,7 +75,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="base-url.html">baseUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The base URL for the NXFit platform service. This should be in the format: <strong>{scheme}://{domain}</strong>. Example: <strong>https://api.nxfit.com</strong>. There should not be a trailing slash.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="base-url.html">baseUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The base URL for the NXFit platform service. This should be in the format: <strong>{scheme}://{domain}</strong>. Example: <strong>https://api.nxfit.com</strong>. There should not be a trailing slash.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -95,6 +95,21 @@
               </div>
             </div>
           </div>
+<a data-name="-390508437%2FProperties%2F2019718036" anchor-label="minLogLevel" id="-390508437%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="min-log-level.html"><span>min</span><wbr></wbr><span>Log</span><wbr></wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-390508437%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="min-log-level.html">minLogLevel</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.logger/-log-level/index.html">LogLevel</a></div><div class="brief "><p class="paragraph">Sets the minimum log level for the SDK. Any log messages with a level lower than this will be ignored.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="593769897%2FProperties%2F2019718036" anchor-label="readTimeoutSeconds" id="593769897%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
           <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
             <div class="main-subrow keyValue ">
@@ -105,7 +120,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="read-timeout-seconds.html">readTimeoutSeconds</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Sets the default read timeout for new connections in seconds.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="read-timeout-seconds.html">readTimeoutSeconds</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Sets the default read timeout for new connections in seconds.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -116,7 +131,7 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span
                 class="pull-right"><span>Generated by </span><a
                 href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>

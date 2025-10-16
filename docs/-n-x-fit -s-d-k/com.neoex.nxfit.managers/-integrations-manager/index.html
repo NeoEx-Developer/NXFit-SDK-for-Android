@@ -58,7 +58,7 @@
   <div class="breadcrumbs"><a href="../../../index.html">NXFit SDK</a><span class="delimiter">/</span><a href="../index.html">com.neoex.nxfit.managers</a><span class="delimiter">/</span><span class="current">IntegrationsManager</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Integrations</span><wbr></wbr><span><span>Manager</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">IntegrationsManager</a></div><p class="paragraph">Provides methods to manage the user's integrations fitness providers. Connecting an user to an integration means that fitness data from that integration will be synced and made available for this user.</p><p class="paragraph">NOTE: The manager maintains state and is designed to be used as a singleton.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">IntegrationsManager</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/AutoCloseable.html">AutoCloseable</a></div><p class="paragraph">Provides methods to manage the user's integrations fitness providers. Connecting an user to an integration means that fitness data from that integration will be synced and made available for this user.</p><p class="paragraph">NOTE: The manager maintains state and is designed to be used as a singleton.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
@@ -75,7 +75,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-connection-event/index.html">ConnectionEvent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>integrationIdentifier<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>connectionCode<span class="token operator">: </span><a href="../../com.neoex.nxfit.enums/-integration-connection-code/index.html">IntegrationConnectionCode</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This event is triggered whenever a user attempts to connect to a new integration. The event contains the the integration identifier and the result of the connection attempt via the <a href="-connection-event/connection-code.html">connectionCode</a> property.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-connection-event/index.html">ConnectionEvent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>integrationIdentifier<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>connectionCode<span class="token operator">: </span><a href="../../com.neoex.nxfit.enums/-integration-connection-code/index.html">IntegrationConnectionCode</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This event is triggered whenever a user attempts to connect to a new integration. The event contains the the integration identifier and the result of the connection attempt via the <a href="-connection-event/connection-code.html">connectionCode</a> property.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-disconnection-event/index.html">DisconnectionEvent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>integrationIdentifier<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This event is triggered whenever a user successfully disconnects from an integration. It includes the integration identifier.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-disconnection-event/index.html">DisconnectionEvent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>integrationIdentifier<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This event is triggered whenever a user successfully disconnects from an integration. It includes the integration identifier.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -99,7 +99,37 @@
       </div>
       <div data-togglable="FUNCTION">
         <h2 class="">Functions</h2>
-        <div class="table"><a data-name="1364753558%2FFunctions%2F2019718036" anchor-label="disconnect" id="1364753558%2FFunctions%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+        <div class="table"><a data-name="-1117130810%2FFunctions%2F2019718036" anchor-label="close" id="-1117130810%2FFunctions%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1117130810%2FFunctions%2F2019718036"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1117130810%2FFunctions%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1117130810%2FFunctions%2F2019718036"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1486429229%2FFunctions%2F2019718036" anchor-label="connect" id="1486429229%2FFunctions%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="connect.html"><span><span>connect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1486429229%2FFunctions%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="connect.html"><span class="token function">connect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">integrationIdentifier<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">authorizeAction<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span>authorizeUrl<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/net/Uri.html">Uri</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Connects the NXFit user to the specified integration. This method supports two basic flows: those that require user authorization and those that do not.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1364753558%2FFunctions%2F2019718036" anchor-label="disconnect" id="1364753558%2FFunctions%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
           <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
@@ -109,22 +139,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="disconnect.html"><span class="token function">disconnect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">integrationIdentifier<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Disconnects the NXFit user from the specified integration. NXFit will no longer receive fitness data for this user for the specified integration.</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="720858157%2FFunctions%2F2019718036" anchor-label="getAuthorizeUri" id="720858157%2FFunctions%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
-          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="get-authorize-uri.html"><span>get</span><wbr></wbr><span>Authorize</span><wbr></wbr><span><span>Uri</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="720858157%2FFunctions%2F2019718036"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-authorize-uri.html"><span class="token function">getAuthorizeUri</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">integrationIdentifier<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/net/Uri.html">Uri</a></div><div class="brief "><p class="paragraph">Generates a URL to be used to launch an Intent which puts the user through the integration authorize process. Part of the URL includes a redirect URL which is used to send the result of the authorize process back to your app. The redirect url contains the application package ID of the app initiating the authorize process. This is done to ensure that the application initiating the authorize process receives the result from the browser. An IntentFilter is required to make this work.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="disconnect.html"><span class="token function">disconnect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">integrationIdentifier<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Disconnects the NXFit user from the specified integration. NXFit will no longer receive fitness data for this user for the specified integration.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -139,7 +154,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="handle-authorize-response.html"><span class="token function">handleAuthorizeResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">response<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.neoex.nxfit.enums/-integration-connection-code/index.html">IntegrationConnectionCode</a></div><div class="brief "><p class="paragraph">Handles the response from the integration authorize process. This also triggers an <a href="connection-events.html">connectionEvents</a> emission with the <a href="../../com.neoex.nxfit.enums/-integration-connection-code/index.html">IntegrationConnectionCode</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="handle-authorize-response.html"><span class="token function">handleAuthorizeResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">response<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.neoex.nxfit.enums/-integration-connection-code/index.html">IntegrationConnectionCode</a></div><div class="brief "><p class="paragraph">Handles the response from the integration authorize process. This also triggers an <a href="connection-events.html">connectionEvents</a> emission with the <a href="../../com.neoex.nxfit.enums/-integration-connection-code/index.html">IntegrationConnectionCode</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -203,7 +218,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="integrations.html">integrations</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.neoex.nxfit.models/-integration-model/index.html">IntegrationModel</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="integrations.html">integrations</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.neoex.nxfit.models/-integration-model/index.html">IntegrationModel</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -214,7 +229,7 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span
                 class="pull-right"><span>Generated by </span><a
                 href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>

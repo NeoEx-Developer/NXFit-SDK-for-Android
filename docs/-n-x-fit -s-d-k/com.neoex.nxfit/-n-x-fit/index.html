@@ -58,7 +58,7 @@
   <div class="breadcrumbs"><a href="../../../index.html">NXFit SDK</a><span class="delimiter">/</span><a href="../index.html">com.neoex.nxfit</a><span class="delimiter">/</span><span class="current">NXFit</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>NXFit</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">NXFit</a></div><p class="paragraph">The NXFit interface provides all the clients and managers needed to access NXFit services. Use the <a href="-companion/build.html">NXFit.build</a> method to build an instance of this.</p><p class="paragraph">Both Clients and Managers are used to access data from the NXFit API service, however, managers provide extra functionality in the form of state management. Managers use local storage to cache data and make reads and writes possible even without network connectivity. Managers may also provide a notification mechanism to indicate changes in data.</p><p class="paragraph">NOTE: The <a href="../../com.neoex.nxfit.managers/-integrations-manager/index.html">IntegrationsManager</a> provides a mechanism to connect and disconnect integrations for the current user. See <a href="../../com.neoex.nxfit.managers/-integrations-manager/get-authorize-uri.html">IntegrationsManager.getAuthorizeUri</a> for more details.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">NXFit</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/AutoCloseable.html">AutoCloseable</a></div><p class="paragraph">The NXFit interface provides all the clients and managers needed to access NXFit services. Use the <a href="-companion/build.html">NXFit.build</a> method to build an instance of this.</p><p class="paragraph">Both Clients and Managers are used to access data from the NXFit API service, however, managers provide extra functionality in the form of state management. Managers use local storage to cache data and make reads and writes possible even without network connectivity. Managers may also provide a notification mechanism to indicate changes in data.</p><p class="paragraph">NOTE: The <a href="../../com.neoex.nxfit.managers/-integrations-manager/index.html">IntegrationsManager</a> provides a mechanism to connect and disconnect integrations for the current user. See <a href="../../com.neoex.nxfit.managers/-integrations-manager/connect.html">IntegrationsManager.connect</a> for more details.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
@@ -82,9 +82,58 @@
           </div>
         </div>
       </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1117130810%2FFunctions%2F2019718036" anchor-label="close" id="-1117130810%2FFunctions%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.neoex.nxfit.managers/-integrations-manager/index.html#-1117130810%2FFunctions%2F2019718036"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1117130810%2FFunctions%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.neoex.nxfit.managers/-integrations-manager/index.html#-1117130810%2FFunctions%2F2019718036"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div data-togglable="PROPERTY">
         <h2 class="">Properties</h2>
-        <div class="table"><a data-name="-592802641%2FProperties%2F2019718036" anchor-label="badgeClient" id="-592802641%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+        <div class="table"><a data-name="-1882097190%2FProperties%2F2019718036" anchor-label="accessTokenFlow" id="-1882097190%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="access-token-flow.html"><span>access</span><wbr></wbr><span>Token</span><wbr></wbr><span><span>Flow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1882097190%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="access-token-flow.html">accessTokenFlow</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A flow that provides access tokens used when making HTTP calls to the NxFit API server. The flow may emit <strong>null</strong> to indicate that there is no access token available. In this case, only endpoints that do not require authentication will succeed. This flow matches the one provided when building this instance and is associated with the user ID.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1571856209%2FProperties%2F2019718036" anchor-label="appContext" id="-1571856209%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="app-context.html"><span>app</span><wbr></wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1571856209%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="app-context.html">appContext</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></div><div class="brief "><p class="paragraph">A reference to the Application Context that this instance was built with.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-592802641%2FProperties%2F2019718036" anchor-label="badgeClient" id="-592802641%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
           <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
@@ -94,7 +143,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="badge-client.html">badgeClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-badge-client/index.html">BadgeClient</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="badge-client.html">badgeClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-badge-client/index.html">BadgeClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-badge-client/index.html">BadgeClient</a> that provides methods to access badge data.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1091931830%2FProperties%2F2019718036" anchor-label="configProvider" id="-1091931830%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="config-provider.html"><span>config</span><wbr></wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1091931830%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="config-provider.html">configProvider</a><span class="token operator">: </span><a href="../-configuration-provider/index.html">ConfigurationProvider</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../-configuration-provider/index.html">ConfigurationProvider</a> that this instance was built with.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -109,7 +173,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="integrations-manager.html">integrationsManager</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.managers/-integrations-manager/index.html">IntegrationsManager</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="integrations-manager.html">integrationsManager</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.managers/-integrations-manager/index.html">IntegrationsManager</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.managers/-integrations-manager/index.html">IntegrationsManager</a> that provides methods to manage third-party integrations for the current user.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-540287289%2FProperties%2F2019718036" anchor-label="isClosed" id="-540287289%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-closed.html"><span>is</span><wbr></wbr><span><span>Closed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-540287289%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="is-closed.html">isClosed</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether this instance has been closed. Once closed, the instance should no longer be used. All resources associated with this instance are released when it is closed.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -124,7 +203,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="profile-client.html">profileClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-profile-client/index.html">ProfileClient</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="profile-client.html">profileClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-profile-client/index.html">ProfileClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-profile-client/index.html">ProfileClient</a> that provides methods to access and update user profile data.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -139,7 +218,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="public-session-client.html">publicSessionClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-public-session-client/index.html">PublicSessionClient</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="public-session-client.html">publicSessionClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-public-session-client/index.html">PublicSessionClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-public-session-client/index.html">PublicSessionClient</a> that provides methods to access public session data.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -154,7 +233,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="public-session-sample-client.html">publicSessionSampleClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-public-session-sample-client/index.html">PublicSessionSampleClient</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="public-session-sample-client.html">publicSessionSampleClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-public-session-sample-client/index.html">PublicSessionSampleClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-public-session-sample-client/index.html">PublicSessionSampleClient</a> that provides methods to access public session sample data.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="801746120%2FProperties%2F2019718036" anchor-label="sampleClient" id="801746120%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sample-client.html"><span>sample</span><wbr></wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="801746120%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="sample-client.html">sampleClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-sample-client/index.html">SampleClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-sample-client/index.html">SampleClient</a> that provides methods to access sample data.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -169,7 +263,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="session-client.html">sessionClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-session-client/index.html">SessionClient</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="session-client.html">sessionClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-session-client/index.html">SessionClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-session-client/index.html">SessionClient</a> that provides methods to access session data.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="124159909%2FProperties%2F2019718036" anchor-label="sessionSampleChunkClient" id="124159909%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="session-sample-chunk-client.html"><span>session</span><wbr></wbr><span>Sample</span><wbr></wbr><span>Chunk</span><wbr></wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="124159909%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="session-sample-chunk-client.html">sessionSampleChunkClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-session-sample-chunk-client/index.html">SessionSampleChunkClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-session-sample-chunk-client/index.html">SessionSampleChunkClient</a> that provides methods to access session sample chunk data.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -184,22 +293,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="session-sample-client.html">sessionSampleClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-session-sample-client/index.html">SessionSampleClient</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="session-sample-client.html">sessionSampleClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-session-sample-client/index.html">SessionSampleClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-session-sample-client/index.html">SessionSampleClient</a> that provides methods to access session sample data.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1513302891%2FProperties%2F2019718036" anchor-label="sourceManager" id="1513302891%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+<a data-name="-810636233%2FProperties%2F2019718036" anchor-label="sourceClient" id="-810636233%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
           <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="source-manager.html"><span>source</span><wbr></wbr><span><span>Manager</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1513302891%2FProperties%2F2019718036"></span>
+                  <div><a href="source-client.html"><span>source</span><wbr></wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-810636233%2FProperties%2F2019718036"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="source-manager.html">sourceManager</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.managers/-source-manager/index.html">SourceManager</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="source-client.html">sourceClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-source-client/index.html">SourceClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-source-client/index.html">SourceClient</a> that provides methods to access source data.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -214,7 +323,37 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="summary-client.html">summaryClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-session-summary-client/index.html">SessionSummaryClient</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="summary-client.html">summaryClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-session-summary-client/index.html">SessionSummaryClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-session-summary-client/index.html">SessionSummaryClient</a> that provides methods to access session summary data.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1896745399%2FProperties%2F2019718036" anchor-label="syncClient" id="1896745399%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sync-client.html"><span>sync</span><wbr></wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1896745399%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="sync-client.html">syncClient</a><span class="token operator">: </span><a href="../../com.neoex.nxfit.clients/-sync-client/index.html">SyncClient</a></div><div class="brief "><p class="paragraph">A reference to the <a href="../../com.neoex.nxfit.clients/-sync-client/index.html">SyncClient</a> that provides methods to synchronize data between the local device and the NXFit backend.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1747946057%2FProperties%2F2019718036" anchor-label="userId" id="-1747946057%2FProperties%2F2019718036" data-filterable-set=":nxfit-sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":nxfit-sdk:dokkaHtml/release" data-filterable-set=":nxfit-sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user-id.html"><span>user</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1747946057%2FProperties%2F2019718036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":nxfit-sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="user-id.html">userId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">The user ID that this instance was built with. A user ID is always required, even if there isn't an access token available.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -225,7 +364,7 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span
                 class="pull-right"><span>Generated by </span><a
                 href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
