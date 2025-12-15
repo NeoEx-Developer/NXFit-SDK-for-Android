@@ -1,4 +1,4 @@
-# NXFit-SDK-for-Android
+# NXFit SDK
 
 This SDK is intended to be used to connect to NXFit services.
 
@@ -29,7 +29,7 @@ GitHub provides maven packages only through authenticated connections.
                     url = uri("https://maven.pkg.github.com/NeoEx-Developer/NXFit-SDK-for-Android")
         
                     credentials {
-                        username = YOUR_GITHUB_USERNAME
+                        username = NeoEx-Developer
                         password = YOUR_GITHUB_ACCESS_TOKEN
                     }
                 }
@@ -39,7 +39,7 @@ GitHub provides maven packages only through authenticated connections.
 - Add the following dependency to your app's *build.gradle.kts* file:
   
         dependencies {
-            implementation("com.neoex:nxfit-sdk:9.1.0")
+            implementation("com.neoex:nxfit-sdk:9.5.0")
         }
   
 - Sync the project with Gradle files 
